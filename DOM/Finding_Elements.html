@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PagesOne</title>
+    <style>body {background-color: black; color: white;}</style>
+</head>
+<body>
+    <p>HTML DOM PAGE</p>
+    <p id="text1">NULL-ID</p>
+    <p class="cls">NULL-CLASS</p>
+    <p id="demo1">NULL</p>
+
+    <p>Text</p>
+
+<script>
+const js = document.getElementById("text1") // ID.
+// document.getElementsByClassName() // class name.
+// document.getElementsByTagName() // b, p, h1.
+
+// Eğer hatalı bir kod satırı varsa hatalı olan satırın altındaki kodlar çalışmaz!
+document.getElementById("demo1").innerText = "Hi JS"
+
+// HTML Elementlerini değiştirme.
+
+// Elementin yazısını değiştirir.
+js.innerText = "..."	
+
+// Etiketi tanır ve öyle yazdırır.
+js.innerHTML = "<b>Hello</b> <i>World</i>"	
+// Aynı zamanda CSS eklenebilir.
+js.innerHTML = "<b style='color: red;'>Hello</b> <i>World</i>"	
+
+// CSS stilini değiştirir.
+js.style.color = "red"
+
+// Attribute (örn. src, href) değiştirir.
+js.setAttribute(attr, value)	
+
+</script>
+
+</body>
+</html>
