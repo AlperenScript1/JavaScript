@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body { background-color: black; color: white; }
+  </style>
+</head>
+<body>
+
+  <p id="tex">DOM</p>
+
+  <script>
+
+
+// ELEMENT EKLEME
+    document.body.appendChild(yeni);            // En sona ekler (Body'nin sonuna)
+    document.body.prepend(yeni);               // En başa ekler (Body'nin başına)
+    // referansEleman'dan hemen ÖNCE ekler:
+    // document.body.insertBefore(yeni, referansEleman);
+
+// ELEMENT SİLME
+    const silinecek = document.getElementById("eski");
+    silinecek.remove();                         // Elemanı komple dünyadan siler
+    // parent.removeChild(child);               // Üst eleman üzerinden alt elemanı siler
+
+// ÖZELLİK (ATTRIBUTE) YÖNETİMİ
+    yeni.setAttribute("class", "kutu");         // Class ekler: <div class="kutu">
+    yeni.id = "ozel-id";                        // ID ekler
+    yeni.getAttribute("id");                    // ID değerini okur
+    yeni.removeAttribute("title");              // Title özelliğini siler
+
+// CSS STİL YÖNETİMİ
+    yeni.style.color = "red";                   // Rengi kırmızı yapar
+    yeni.style.backgroundColor = "black";       // Arka planı siyah yapar (CamelCase kullanılır)
+    yeni.classList.add("aktif");                // CSS'teki .aktif class'ını ekler
+    yeni.classList.remove("pasif");             // .pasif class'ını çıkarır
+    yeni.classList.toggle("gizle");             // Varsa siler, yoksa ekler (Şalter gibi)
+
+// OLAYLAR (ETKİLEŞİM)
+    yeni.onclick = () => { alert("Tıklandı!"); }; // Eski yöntem tıklama
+    yeni.addEventListener("click", () => {         // Modern ve profesyonel yöntem
+        console.log("Butona basıldı!");
+    });
+
+</script>
+
+</body>
+</html>

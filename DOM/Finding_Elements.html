@@ -15,28 +15,29 @@
     <p>Text</p>
 
 <script>
-const js = document.getElementById("text1") // ID.
-// document.getElementsByClassName() // class name.
-// document.getElementsByTagName() // b, p, h1.
+//  HTML elementlerini bulma/ulaşma 
+    const js = document.getElementById("text1") // ID.
+    // document.getElementsByClassName() // class name.
+    // document.getElementsByTagName() // b, p, h1.
 
-// Eğer hatalı bir kod satırı varsa hatalı olan satırın altındaki kodlar çalışmaz!
-document.getElementById("demo1").innerText = "Hi JS"
+    // Eğer hatalı bir kod satırı varsa hatalı olan satırın altındaki kodlar çalışmaz!
+    document.getElementById("demo1").innerText = "Hi JS"
 
 // HTML Elementlerini değiştirme.
 
-// Elementin yazısını değiştirir.
-js.innerText = "..."	
+    // Elementin yazısını değiştirir.
+    js.innerText = "..."	
 
-// Etiketi tanır ve öyle yazdırır.
-js.innerHTML = "<b>Hello</b> <i>World</i>"	
-// Aynı zamanda CSS eklenebilir.
-js.innerHTML = "<b style='color: red;'>Hello</b> <i>World</i>"	
+    // Etiketi tanır ve öyle yazdırır.
+    js.innerHTML = "<b>Hello</b> <i>World</i>"	
+    // Aynı zamanda CSS eklenebilir.
+    js.innerHTML = "<b style='color: red;'>Hello</b> <i>World</i>"	
 
-// CSS stilini değiştirir.
-js.style.color = "red"
+    // CSS stilini değiştirir.
+    js.style.color = "red"
 
-// Attribute (örn. src, href) değiştirir.
-js.setAttribute(attr, value)	
+    // Attribute (örn. src, href) değiştirir.
+    js.setAttribute(attr, value)	
 
 </script>
 
