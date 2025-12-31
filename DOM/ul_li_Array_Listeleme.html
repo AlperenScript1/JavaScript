@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<ul id="ul_list"></ul>
+
+<script>
+const alfabeTR = ["a", "b", "c", "ç", "d", "e", "f", "g", "ğ", "h", "ı", "i", "j", "k", "l", "m", "n", "o", "ö", "p", "r", "s", "ş", "t", "u", "ü", "v", "y", "z"];
+
+const ul_Liste = document.getElementById("ul_list");
+
+for (let i = 0; i < alfabeTR.length; i++) {
+    const harf = alfabeTR[i];
+
+    const li = document.createElement("li");
+    li.innerText = i + ". " + harf
+    ul_Liste.appendChild(li)
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h2 id="text1">HTML_CSS_JS</h2>
+
+
+    <button onclick="renk()">Tikla</button>
+
+    <button onclick="sifirla()">Sifirla</button>
+
+<script>
+
+let sayac = 0
+
+const renk = () => {
+     
+    let sonuc = sayac % 2
+    if (sonuc == 0){
+        document.getElementById("text1").style.color="green"
+    }
+    else{
+        document.getElementById("text1").style.color="red"
+    }
+    
+    sayac++
+}
+
+const sifirla = () => {
+    sayac = 0
+    document.getElementById("text1").style.color="black"
+}
+
+</script>
+</body>
+</html>

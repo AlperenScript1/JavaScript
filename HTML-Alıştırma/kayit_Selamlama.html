@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+<input type="text" id="name">
+<button onclick="kayit()">Kayıt olunuz.</button>
+<h2 id="uyari">_</h2>
+
+<script>
+
+const kayit = () => {
+    let name = document.getElementById("name").value
+    let uyari = document.getElementById("uyari")
+    // uyari.innerText = ""
+    
+    if(name == ""){
+        uyari.innerText = "Lütfen isminizi giriniz."     
+    }
+    else uyari.innerHTML = name + " Hoşgeldiniz"
+    
+    // Silme işlemi 
+    document.getElementById("name").value = ""
+}
+</script>
+</body>
+</html>
