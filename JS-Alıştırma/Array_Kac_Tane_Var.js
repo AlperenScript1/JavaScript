@@ -6,12 +6,9 @@ const bul = 0
 for (let i = 0; i < data.length; i++) {
     const element = data[i];
     if (element == bul){
-         console.log("")
-         sayac++;
-
+        console.log("")
+        sayac++;
     }
-    else{
-        console.log()
-    }
+    else  console.log()
 }
 console.log("Toplam: " + sayac)
