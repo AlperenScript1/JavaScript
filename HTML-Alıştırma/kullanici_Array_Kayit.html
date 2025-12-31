@@ -24,22 +24,23 @@ const kayiSistem = () =>{
     const isim = document.getElementById("text").value
     const uyari = document.getElementById("uyari") 
     const dataList = document.getElementById("dataList")
-
+    dataList.innerText = ""
+    
     if(isim != ""){
         data.push(isim)
         uyari.innerText = "Sisteme kayıt oldunuz"
-
-       for (let i = 0; i < data.length; i++) { // <ul> <li> ile listeleme
-        const element = data[i];
-        const li = document.createElement("li")
-        li.innerText = element
-        dataList.appendChild(li)
+        
+        for (let i = 0; i < data.length; i++) { // <ul> <li> ile listeleme
+            const element = data[i];
+            const li = document.createElement("li")
+            li.innerText = element
+            dataList.appendChild(li)
         }
     }
     else
-       uyari.innerText = "Lütfen isiminizi giriniz."
+    uyari.innerText = "Lütfen isiminizi giriniz."
 
-    document.getElementById("text").value = ""
+document.getElementById("text").value = ""
 }
 
 </script>
