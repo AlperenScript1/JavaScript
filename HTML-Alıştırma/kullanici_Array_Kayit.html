@@ -9,8 +9,38 @@
     
 
 
+<h2 id="uyari"></h2>
+<input type="text" id="text" >
+<button id="kayitButton" onclick="kayiSistem()">Kayit olunuz</button>
+<ul id="dataList"></ul>
+
 
 <script>
+data = []
+
+
+const kayiSistem = () =>{
+    const kayitButton = document.getElementById("kayitButton")
+    const isim = document.getElementById("text").value
+    const uyari = document.getElementById("uyari") 
+    const dataList = document.getElementById("dataList")
+
+    if(isim != ""){
+        data.push(isim)
+        uyari.innerText = "Sisteme kayıt oldunuz"
+
+       for (let i = 0; i < data.length; i++) { // <ul> <li> ile listeleme
+        const element = data[i];
+        const li = document.createElement("li")
+        li.innerText = element
+        dataList.appendChild(li)
+        }
+    }
+    else
+       uyari.innerText = "Lütfen isiminizi giriniz."
+
+    document.getElementById("text").value = ""
+}
 
 </script>
 </body>
