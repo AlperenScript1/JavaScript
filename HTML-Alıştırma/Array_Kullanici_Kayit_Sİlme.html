@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2 id="uyari"></h2>
+<input type="text" id="text" >
+<button id="kayitButton" onclick="kayiSistem()">Kayit olunuz</button>
+<ul id="dataList"></ul>
+
+<script>
+data = [] 
+// data.splice(1, 1)
+
+const kayiSistem = () => {
+    const isim = document.getElementById("text").value;
+    const uyari = document.getElementById("uyari");
+    const dataList = document.getElementById("dataList");
+
+    // Her seferinde listeyi temizle
+    dataList.innerText = "";
+
+    if (isim != "") {
+        data.push(isim);
+        uyari.innerText = "Sisteme kayıt oldunuz";
+    } else if (data.length === 0) { // Eğer dizi boşsa ve input da boşsa
+        uyari.innerText = "Lütfen isminizi giriniz.";
+    }
+
+    // LİSTELEME DÖNGÜSÜ (if dışında olması daha iyidir, her durumda güncel listeyi basar)
+    for (let i = 0; i < data.length; i++) {
+        const element = data[i];
+        const li = document.createElement("li");
+        li.innerText = element + " ";
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Sil";
+
+        // --- SİHRİ BURAYA YAZIYORUZ ---
+        deleteBtn.onclick = () => {
+            data.splice(i, 1); // Diziden i'inci sıradaki elemanı (kendisini) sil
+            kayiSistem();      // Fonksiyonu tekrar çağır ki ekran tazelensin
+        };
+
+        li.appendChild(deleteBtn);
+        dataList.appendChild(li);
+    }
+
+    document.getElementById("text").value = "";
+}
+
+
+</script>
+</body>
+</html>

@@ -69,3 +69,6 @@
 
 // split() → string’i array’e çevirir
 "Ali,Veli,Ayşe".split(",")  // ["Ali", "Veli", "Ayşe"]
+
+// i = döngüdeki sıra numarası
+data.splice(i, 1);

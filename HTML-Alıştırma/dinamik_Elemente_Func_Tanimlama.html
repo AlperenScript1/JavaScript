@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Buton Örneği</title>
+</head>
+<body>
+
+  <h2>JS ile Sonradan Oluşturulan Buton</h2>
+
+  <div id="container"></div>
+
+<script>
+
+    // 1 HTML'deki container div'ini yakala
+    const container = document.getElementById("container");
+
+    // 2 Button elementi oluştur
+    const btn = document.createElement("button");
+
+    // 3   Butonun üzerindeki yazıyı belirle
+    btn.innerText = "Sil";
+
+    // 4  Arrow function ile onclick tanımla
+    btn.onclick = () => {
+    alert("Butona tıklandı");
+    };
+
+    // 5 Butonu container içine ekle
+    container.appendChild(btn);
+</script>
+</body>
+</html>
