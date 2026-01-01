@@ -1,0 +1,32 @@
+body {
+    display: flex;         
+    justify-content: center; 
+    align-items: flex-start; 
+    min-height: 100vh;    
+    margin: 0;             
+    padding-top: 50px;  
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px;      
+    justify-content: center; /
+}
+
+.card{
+    width: 300px;         
+    padding: 20px;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+.name{
+    color: black;
+    font-size: 35px;
+}
+
+.btn1{
+    margin-top: 15px;
+}
+.btn1:hover{
+    background-color: green;
+}
