@@ -28,6 +28,11 @@
         <button class="btn1" onclick="ekle()">Sepete Ekle</button>
     </div>  
 
+    <h2 class="sepetHeader">Sepet</h2>
+    <ul id="sepetListe">
+        <li class="sepetListe">-</li>
+    </ul>
+
 <script>
 sepetimiz = []
 
@@ -39,19 +44,33 @@ const ekle = () => {
     for (let i = 0; i < sepetimiz.length; i++) {
         const element = sepetimiz[i];
         if(element == urunIsmi) {
-            console.log("Ürün zaten eklenmiş")
             bayrak = true
             break
         } 
     }
 
-    if(bayrak == true)
-        console.log("Ürünz aten eklenmiş eklenmiyor..") 
-    
+    if(bayrak == true){
+        console.log("Ürünz zaten sepetinize eklenmiş.")
+        alert("Ürün önceden sepete eklenmiş.")}
     else 
         sepetimiz.push(urunIsmi)
 
     console.log(sepetimiz)
+    yazdir()
+}
+
+
+const yazdir = () =>{
+    document.getElementById("sepetListe").innerHTML = ""
+    const liste = document.getElementById("sepetListe");
+
+    for (let i = 0; i < sepetimiz.length; i++) {
+        const element = sepetimiz[i];
+        const li = document.createElement("li")
+
+        li.innerText = element
+        liste.appendChild(li);        
+    }
 }
 
 </script>

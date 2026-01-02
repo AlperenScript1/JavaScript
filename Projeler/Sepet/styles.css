@@ -30,3 +30,25 @@ body {
 .btn1:hover{
     background-color: green;
 }
+
+.sepetHeader{
+    position: absolute; 
+    top: 60%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-align: center; 
+}
+
+.sepeteListe{
+    position: absolute; 
+    top: 60%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-align: center; 
+}
