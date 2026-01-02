@@ -23,7 +23,7 @@
     // Eğer hatalı bir kod satırı varsa hatalı olan satırın altındaki kodlar çalışmaz!
     document.getElementById("demo1").innerText = "Hi JS"
 
-// HTML Elementlerini değiştirme.
+    // HTML Elementlerini değiştirme.
 
     // Elementin yazısını değiştirir.
     js.innerText = "..."	
@@ -39,7 +39,21 @@
     // Attribute (örn. src, href) değiştirir.
     js.setAttribute(attr, value)	
 
-</script>
+    //querySelector sayfanın yukarıdan aşağıya doğru tarar ve kriterine uyan karşılaştığı ilk öğeyi sana getirir. Eğer sayfada 10 tane aynı class'tan buton varsa, o sadece ilkini seçer.
+    // Not: Eğer kriterine uyan tüm öğeleri seçmek istersen querySelectorAll kullanman gerekir.
+    // ID üzerinden butonu seçelim
+    
+    const buton = document.querySelector("#kaydet");
 
+    // Class üzerinden paragrafı seçelim
+    const paragraf = document.querySelector(".metin");
+
+    // Şimdi onlarla oynayalım:
+    buton.addEventListener("click", () => {
+        paragraf.textContent = "Butona basıldı!";
+        paragraf.style.color = "red";
+    });
+
+</script>
 </body>
 </html>

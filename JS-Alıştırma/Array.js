@@ -11,7 +11,7 @@ console.log(arr[1])
 const sayi = [10, 20, 30, 40] // tam olark ne istiyorsun onu anlamadım 
 console.log(sayi[sayi.length - 1])
 
-// 4-) Her elemanı 2 ile çarp ve yeni Array ekle 
+// -) Her elemanı 2 ile çarp ve yeni Array ekle 
 const s1 = [1, 2, 3, 4]
 const s2 = []
 
